@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Sidebar from './Sidebar';
 import MobileNavBar from './MobileNavBar';
@@ -59,7 +60,5 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       <WhatsAppActivationButton />
     </div>;
 };
-
-export default MainLayout;
 
 export default MainLayout;
