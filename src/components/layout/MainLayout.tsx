@@ -1,9 +1,9 @@
-
 import React from 'react';
 import Sidebar from './Sidebar';
 import MobileNavBar from './MobileNavBar';
 import MobileHeader from './MobileHeader';
 import { useIsMobile } from '@/hooks/use-mobile';
+import WhatsAppActivationButton from '@/components/common/WhatsAppActivationButton';
 
 import { useAppContext } from '@/contexts/AppContext';
 
@@ -55,8 +55,11 @@ const MainLayout: React.FC<MainLayoutProps> = ({
           </main>
         </div>}
       
-
+      {/* WhatsApp Floating Button */}
+      <WhatsAppActivationButton />
     </div>;
 };
+
+export default MainLayout;
 
 export default MainLayout;
