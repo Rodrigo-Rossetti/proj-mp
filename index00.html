@@ -1,0 +1,36 @@
+import { Button } from "@/components/ui/button";
+import { MessageCircle, CreditCard } from "lucide-react";
+
+const NavBar = () => {
+  return (
+    <header className="sticky top-0 z-40 bg-background/75 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
+      <div className="container flex h-16 items-center justify-between">
+        <a href="#hero" className="inline-flex items-center gap-2" aria-label="mePouPay - Início">
+          <img src="/mepoupay-favicon.ico" alt="mePouPay logo" width={28} height={28} />
+          <span className="font-semibold">mePouPay</span>
+        </a>
+        <nav className="hidden md:flex items-center gap-6 text-sm">
+          <a href="#demo" className="hover:text-foreground/80">Como funciona</a>
+          <a href="#beneficios" className="hover:text-foreground/80">Benefícios</a>
+          <a href="#funcionalidades" className="hover:text-foreground/80">Funcionalidades</a>
+          <a href="#planos" className="hover:text-foreground/80">Preços</a>
+          <a href="#faq" className="hover:text-foreground/80">FAQ</a>
+        </nav>
+        <div className="flex items-center gap-3">
+          <Button asChild variant="subtle">
+            <a href="#planos" aria-label="Assinar agora">
+              <CreditCard className="mr-1" /> Assinar
+            </a>
+          </Button>
+          <Button asChild variant="hero" size="sm">
+            <a href="https://wa.me/5511994841910?text=Ol%C3%A1%20*mePouPay*%2C%20gostaria%20de%20assinar%20o%20app" target="_blank" rel="noopener" aria-label="Experimentar no WhatsApp">
+              <MessageCircle className="mr-1" /> WhatsApp
+            </a>
+          </Button>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default NavBar;
