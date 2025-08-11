@@ -1,4 +1,4 @@
-# 💰 PoupeJá - Sistema Completo de Gestão Financeira
+# 💰 mePouPay.com - Sistema Completo de Gestão Financeira
 
 Sistema completo de gestão financeira pessoal com foco em facilidade de uso, automação e redistribuição para múltiplas organizações.
 
@@ -254,7 +254,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 - **Issues**: [GitHub Issues](./issues)
 - **Discussões**: [GitHub Discussions](./discussions)
-- **Email**: support@poupeja.com
+- **Email**: mePouPay@Gmail.com
 
 ## 🏆 Créditos
 
