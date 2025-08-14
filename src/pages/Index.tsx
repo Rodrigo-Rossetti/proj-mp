@@ -177,7 +177,7 @@ const Index = () => {
     <MainLayout title={t('dashboard.title')} onAddTransaction={handleAddTransaction}>
       <SubscriptionGuard feature="o dashboard completo">
         <motion.div 
-          className="space-y-8"
+          className="space-y-8 min-h-0"
           variants={containerVariants}
           initial="hidden"
           animate="visible"

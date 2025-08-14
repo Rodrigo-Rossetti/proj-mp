@@ -91,7 +91,8 @@ const GoalsPage = () => {
   return (
     <MainLayout>
       <SubscriptionGuard>
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div className="min-h-0">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <h2 className="text-2xl font-bold">{t('goals.yourGoals')}</h2>
           <div className="flex gap-2">
             <Button variant="outline" onClick={handleRefreshGoals}>
@@ -228,6 +229,7 @@ const GoalsPage = () => {
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialog>
+        </div>
       </SubscriptionGuard>
     </MainLayout>
   );

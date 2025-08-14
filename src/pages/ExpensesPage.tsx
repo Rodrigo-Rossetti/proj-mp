@@ -67,7 +67,7 @@ const ExpensesPage = () => {
 
   return (
     <MainLayout title={t('expenses.title')}>
-      <div className="space-y-6">
+      <div className="space-y-6 min-h-0">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <h2 className="text-2xl font-bold">{t('expenses.title')}</h2>
           <div className="flex gap-2 items-center">

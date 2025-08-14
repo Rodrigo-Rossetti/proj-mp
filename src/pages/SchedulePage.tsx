@@ -161,7 +161,7 @@ const SchedulePage = () => {
       onAddTransaction={handleAddTransaction}
     >
       <SubscriptionGuard feature="agendamentos de pagamentos">
-        <div className="space-y-4 md:space-y-6">
+        <div className="space-y-4 md:space-y-6 min-h-0">
           {/* Header Section */}
           <div className="flex flex-col gap-3 md:flex-row md:justify-between md:items-center md:gap-4">
             <div>

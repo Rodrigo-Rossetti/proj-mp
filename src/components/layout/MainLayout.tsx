@@ -34,10 +34,10 @@ const MainLayout: React.FC<MainLayoutProps> = ({
     }
   };
   
-  return <div className="min-h-screen bg-background w-full">
-      {isMobile ? <div className="flex flex-col h-screen w-full">
+  return <div className="bg-background w-full">
+      {isMobile ? <div className="flex flex-col min-h-screen w-full">
           <MobileHeader hideValues={hideValues} toggleHideValues={toggleHideValues} />
-          <main className="flex-1 overflow-auto p-4 pb-20 pt-20 w-full">
+          <main className="flex-1 overflow-y-auto p-4 pb-20 pt-20 w-full">
             {title && <div className="mb-6">
                 
               </div>}

@@ -35,7 +35,7 @@ const TransactionsPage = () => {
   return (
     <MainLayout>
       <SubscriptionGuard feature="movimentações ilimitadas">
-        <div className="w-full px-4 py-4 md:py-8 pb-20 md:pb-8">
+        <div className="w-full px-4 py-4 md:py-8 pb-20 md:pb-8 min-h-0">
           {/* Desktop Add Button */}
           {!isMobile && (
             <div className="mb-6">
