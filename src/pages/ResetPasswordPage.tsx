@@ -24,8 +24,10 @@ const ResetPasswordPage = () => {
   useEffect(() => {
     const checkSession = async () => {
       const { data } = await supabase.auth.getSession();
-      // Se não houver sessão ou o usuário não estiver em modo de recuperação, redirecionar
-      if (!data.session || !window.location.hash.includes('type=recovery')) {
+      
+      // Para reset de senha, se chegou aqui com sessão, é válido
+      // O Supabase já validou o token durante o redirecionamento
+      if (!data.session) {
         toast({
           title: 'Link inválido',
           description: 'O link de redefinição de senha é inválido ou expirou.',
@@ -35,7 +37,17 @@ const ResetPasswordPage = () => {
       }
     };
 
+    // Verificar auth state changes para capturar sessions de recovery
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      if (event === 'PASSWORD_RECOVERY' || (event === 'SIGNED_IN' && session)) {
+        // Usuário chegou via link de reset, sessão é válida
+        console.log('Password recovery session detected');
+      }
+    });
+
     checkSession();
+
+    return () => subscription.unsubscribe();
   }, [navigate, toast]);
 
   const handleSubmit = async (e: React.FormEvent) => {
