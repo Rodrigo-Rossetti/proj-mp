@@ -19,9 +19,9 @@ interface BrandingContextType {
 
 const defaultBranding: BrandingData = {
   companyName: 'PoupeJá!',
-  logoUrl: '/lovable-uploads/87f23d85-2d95-44c2-af4e-c39a251cceff.png',
+  logoUrl: 'https://puptqwvitqnlakhpgkym.supabase.co/storage/v1/object/public/uploads/logos/1754232347342-xhmvdajugz.png',
   faviconUrl: '/favicon.ico',
-  logoAltText: 'PoupeJá Logo'
+  logoAltText: 'mePouPay Logo'
 };
 
 const BrandingContext = createContext<BrandingContextType | undefined>(undefined);
